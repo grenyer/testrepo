@@ -1,9 +1,4 @@
----
-output: 
-  html_document: 
-    keep_md: yes
-    toc: yes
----
+
 # WARNING
 Don't use anything here - it won't work, by design.
 
