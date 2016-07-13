@@ -8,7 +8,9 @@ Longitude<-supdata$Longitude
 mylocs<-as.data.frame(cbind(Longitude,Latitude))
 
 LoadData(Data = mylocs)
-ModelParameters(sigma = 0.25)
+ModelParameters(sigma = 0.1,minburnin = 500,Samples = 100000)
 GraphicParameters()
 CreateMaps()
 RunMCMC()
+ThinandAnalyse(thinning = 200)
+PlotGP()
