@@ -4,7 +4,7 @@ coef1<-runif(n = 1,min=-3,max=3)
 coef2<-runif(n = 1,min=-2,max=2)
 myj<-runif(n = 1,min=0,max=25)
 
-b<-rgamma(1000, shape = 1)
+b<-rbinom(1000, shape = 1)
 b2<-b^2
 c<-jitter(x=(coef1*b)+coef2*(b^2), amount=myj)
 plot(c~b)
