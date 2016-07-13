@@ -1,10 +1,14 @@
 #Generate some random lat longs
 library(Rgeoprofile)
-Latitude<-runif(10,min = 51, max=52)
-Longitude<-runif(10,min=-1,max=1)
+supdata<-read.csv(file = "sainsburys.csv")
+
+
+Latitude<-supdata$Latitude
+Longitude<-supdata$Longitude
 mylocs<-as.data.frame(cbind(Longitude,Latitude))
 
 LoadData(Data = mylocs)
-ModelParameters()
+ModelParameters(sigma = 0.25)
 GraphicParameters()
 CreateMaps()
+RunMCMC()
